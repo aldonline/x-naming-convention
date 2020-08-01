@@ -9,7 +9,7 @@ Save time and brain cycles when naming (and finding) things in your codebase!
 Summary:
 ```
 /src/x/{topic}/code.js
-/src/x/{topic1}__{topic1}/code.js
+/src/x/{topic1}__{topic2}/code.js
 ```
 
 # Step 1: /src/x
