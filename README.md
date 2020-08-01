@@ -62,7 +62,7 @@ src/x/graphql__react/MyGraphQLProviderHOC.js
 
 ## That's it! here are some tips...
 
-* You'll notice that most things will fall naturally into one of these "x/{name}" folders
+
 * You can even create folders for top-level concepts like Array, Date, etc
 
 ```
@@ -70,11 +70,8 @@ src/x/Date/compareDates.js
 src/x/Array/arrayStartsWith.js
 ```
 
-* Avoid having generic "util" folders
-* Not all your code will fit in the x folder
-* Some of your code is actually part of your own domain model, or problem. That's fine, you'll put it anywhere you want
-* The "x" folder is for code that is granular, simple, utilitarian, and clearly related to external packages. In other words, it is what you would normally store in a "util", "helper" or "etc" folder.
-
+* Avoid having generic "util" folders. Most of the times, code that ends up there could be nicely organized by topic in the x folder
+* Not all your code will fit in the x folder: Some of your code is actually part of your own domain model, or problem. That's fine, you'll put it anywhere you want. However, feel free to use the x folder for your own stuff as well. For example: `src/x/docs.myapp.com` can hold the code for a website that's part of your project.
 
 # Examples
 
