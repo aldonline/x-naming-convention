@@ -51,8 +51,11 @@ src/x/stripe/getStripeTokens.js
 * In this case, you can create an x folder with two names separated by a double underscore
 
 ```
-src/x/react__graphql/MyGraphQLProviderHOC.js
+src/x/graphql__react/MyGraphQLProviderHOC.js
 ```
+
+* The topic names are sorted alphabetically (so it will always be "graphql__react" and not "react__graphql")
+* Keep things mechanical and deterministic!
 
 # That's it! here are some tips...
 
