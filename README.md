@@ -1,10 +1,8 @@
 # The "x" Naming Convention
 
-Save time and brain cycles when naming (and finding) things in your codebase!
-
-* This document describes a naming convention for lazy developers
-* It is a mechanical convention: It is easy to figure out where things go, and where to find them when needed
-* The main explanation is for JS/Python/Ruby-like languages, but the same concepts apply to other languages (including Java). More on that at the end.
+* The "x" naming convention lets you save time and brain cycles when naming (and finding) things in your codebase!
+* It is a mechanical convention: It is easy to figure out where things go, and where to find them when needed. No need to get creative (and later regret it)
+* The main description of the convention is for JS/Python/Ruby-like languages, but the same concepts apply to other languages (including Java). More on that at the end.
 
 Summary:
 ```
@@ -12,15 +10,18 @@ Summary:
 /src/x/{topic1}__{topic2}/code.js
 ```
 
-# Step 1: /src/x
+# The Convention
+
+## Rule 1: /src/x
 
 * Create an "x" folder or package at the root level (for example 'src/x')
+* This folder will hold "as much of your code" as possible
 
 ```
 src/x/ <--- this is a folder
 ```
 
-# Step 2: /src/x/{topic}
+## Rule 2: /src/x/{topic}
 
 * Inside this folder, you'll create "topic" folders
 * These folders act like index entries and help you organize your code
@@ -31,7 +32,7 @@ src/x/lodash/ <--- all code that's closely related to the "lodash" package goes 
 src/x/stripe/ <--- all code that's closely related to the "stripe" npm package goes here
 ```
 
-# Step 3: /src/x/{topic}/code.js
+## Rule 3: /src/x/{topic}/code.js
 
 * Within these folders, you add the actual code
 * Keep the files small. Ideally each file contains only one function/class
@@ -45,7 +46,7 @@ src/x/stripe/getStripeTokens.js
 * If you want, you can shorten the filenames since they're a bit redundant (Date/compareDate --> Date/compare.js)
 * if you don't mind snake_case, you can even use more descriptive names that are still deterministic and might help with auto-complete (Date/Date_compare.js)
 
-# Step 4: /src/x/{topic1}__{topic2}
+## Rule 4: /src/x/{topic1}__{topic2}
 
 * Sometimes you'll write code that isn't clearly related to "one" particular NPM package, but to 2 or more.
 * In this case, you can create an x folder with two names separated by a double underscore
@@ -57,7 +58,7 @@ src/x/graphql__react/MyGraphQLProviderHOC.js
 * The topic names are sorted alphabetically (so it will always be "graphql__react" and not "react__graphql")
 * Keep things mechanical and deterministic!
 
-# That's it! here are some tips...
+## That's it! here are some tips...
 
 * You'll notice that most things will fall naturally into one of these "x/{name}" folders
 * You can even create folders for top-level concepts like Array, Date, etc
@@ -77,16 +78,17 @@ src/x/Array/arrayStartsWith.js
 
 ## Simple
 
-* The Redwood.js codebase uses a simplified version of this convention
+* The Redwood.js codebase uses a simplified version of this convention (topic files instead of folders).
 * https://github.com/redwoodjs/redwood/tree/main/packages/structure/src/x
 
 ## Advanced
 
-* At Decoupled we have one private codebase with 5000+ files in multiple languages.
-* Here's a (filtered) list of files from that codebase that shows just how important the "x" convention has become over time
-* The "x" convention has helped us keep productivity high, even at large scales, and avoid unnecessary duplication of functionality
+* At Decoupled we have one private codebase with 5000+ files in 10+ languages.
+* Here's a (filtered) list of TypeScript files from that codebase that shows just how important the "x" convention has become over time
 * It is easy to know where to put a new piece of code, and it easy to search for code (even when you don't know it exists)
-* It uses long, descriptive names to help with autocomplete
+  * Easy storing helps us keep productivity high, even at large scales (you can keep adding functionality, and the complexity of the codebase doesn't grow)
+  * Easy retrieval helps us avoid unnecessary duplication of functionality (developers know where to look for code)
+* As a bonus, we use long, descriptive names that play nicely with autocomplete
 
 ```
 x/Array/Array_findOrCreate.ts
