@@ -1,8 +1,10 @@
 # The "x" Naming Convention
 
-* The "x" naming convention lets you save time and brain cycles when naming (and finding) things in your codebase!
-* It is a mechanical convention: It is easy to figure out where things go, and where to find them when needed. No need to get creative (and later regret it)
+* The "x" naming convention lets you save time and brain cycles when naming (and finding) things in your codebase
+* It is a mechanical convention: It is easy to figure out where things go and where to find them when needed. No need to get creative (and later regret it!)
 * The main description of the convention is for JS/Python/Ruby-like languages, but the same concepts apply to other languages (including Java). More on that at the end.
+
+Warning: This convention is counter-intuitive and feels awkward at first. But once you've used it, it is hard to go back. You've been warned! :)
 
 Summary:
 ```
