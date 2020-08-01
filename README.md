@@ -43,7 +43,7 @@ src/x/stripe/getStripeTokens.js
 ```
 
 * If you want, you can shorten the filenames since they're a bit redundant (Date/compareDate --> Date/compare.js)
-* if you don't mind snake_case, you can even use more deterministic names (Date/Date_compare.js)
+* if you don't mind snake_case, you can even use more descriptive names that are still deterministic and might help with auto-complete (Date/Date_compare.js)
 
 # Step 4: /src/x/{topic1}__{topic2}
 
